@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-ivory: #F4F0E7;
+    --text-charcoal: #171614;
+    --text-warmgray: #6D675E;
+    --accent-gold: #B08A45;
+    --accent-maroon: #4A2424;
+    --border-stone: #D7D0C3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F4F0E7;
+    color: #171614;
+    font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #F4F0E7;
+    color: #171614;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B08A45;
+    color: #F4F0E7;
+  }
+}
+
+/* Heritage Architectural Details */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #B08A45, transparent);
+}
+
+.stone-line {
+  height: 1px;
+  background-color: #D7D0C3;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #D7D0C3;
+}
+
+/* Archival photography subtle filter */
+.heritage-image-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-image-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(176, 138, 69, 0.2);
+  pointer-events: none;
+}
+
+/* Smooth typography and image hover transitions */
+.transition-editorial {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F0E7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CDC7BC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B08A45;
+}
+
+/* Hide scrollbar for clean horizontal scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
